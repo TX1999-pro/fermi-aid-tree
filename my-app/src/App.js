@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import SearchBar from './widgets/SearchBar.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='box'>
+        <h1><em>Explore the power of quick estimation</em></h1>
+        <SearchBar />
+      </div>
+      <hr />
+      <div className='box'></div>
     </div>
   );
 }
