@@ -1,0 +1,31 @@
+/* Style for Autocomplete */
+input {
+  border: 1px solid #999;
+  padding: 8px;
+  width: 60%;
+}
+.no-autocomplete {
+  color: #999;
+  padding: 8px;
+}
+.autocomplete {
+  border: 10px solid #999;
+  border-top-width: 0;
+  list-style: none;
+  margin-top: 0;
+  max-height: 20vh;
+  overflow-y: auto;
+  width: 60%;
+}
+.autocomplete li {
+  padding: 8px;
+}
+.autocomplete > .active,
+.autocomplete li:hover {
+  background-color: darkgray;
+  cursor: pointer;
+  font-weight: 700;
+}
+.autocomplete li:not(:last-of-type) {
+  border-bottom: 1px solid #999;
+}

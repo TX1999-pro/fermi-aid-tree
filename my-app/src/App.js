@@ -1,10 +1,11 @@
 import './App.css';
 import React, { useState } from 'react';
-import SearchBar from './components/SearchBar.js';
+import ReactiveSearch from './components/SearchBar/ReactSearchAutocomplete';
 import InputArea from './components/InputArea';
 import CenteredTree from './components/CenteredTree';
 import CustomNodeTree from './components/CustomNodeTree';
 import debugData from './components/data/with-attributes.json';
+import searchSuggestion from './data/SOINC_FP_suggestion.json'
 
 function App() {
   const initialTextAreaValue = JSON.stringify(debugData);
@@ -42,14 +43,14 @@ function App() {
 
   return (
     <div className="App">
-
-      <h1><em>Explore the power of quick estimation</em></h1>
-      <br />
-      <SearchBar />
+      <header className="App-header">
+        <h1><em>Explore the power of quick estimation</em></h1>
+        <ReactiveSearch suggestions={searchSuggestion} />
+      </header>
       <hr />
       <div className='container'>
         <div className='box'>
-          <h2>Conversation</h2>
+          <h2>Fermy's Estimation</h2>
         </div>
         <div className='box'>
           <h2>JSON View</h2>
