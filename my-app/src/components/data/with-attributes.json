@@ -1,0 +1,96 @@
+{
+    "id": 0,
+    "name": "Root",
+    "attributes": {
+        "dimension": "1",
+        "final value": 100,
+        "uncertainty tolerance": 0,
+        "unit": "unit"
+    },
+    "children": [
+        {
+            "name": "Node 1",
+            "attributes": {
+                "dimension": "1",
+                "value": 100,
+                "uncertainty": 0,
+                "unit": "unit",
+                "operation": "^(1)"
+            },
+            "children": [
+                {
+                    "name": "Subnode 1.1",
+                    "attributes": {
+                        "dimension": "1",
+                        "value": 100,
+                        "uncertainty": 0,
+                        "unit": "unit",
+                        "operation": "^(1)"
+                    }
+                },
+                {
+                    "name": "Subnode 1.2",
+                    "attributes": {
+                        "dimension": "1",
+                        "value": 100,
+                        "uncertainty": 0,
+                        "unit": "unit",
+                        "operation": "^(1)"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Node 2",
+            "attributes": {
+            "dimension": "1",
+            "value": 100,
+            "uncertainty": 0,
+            "unit": "unit",
+            "operation": "^(1)"
+            },
+            "children": [
+                {
+                    "name": "Subnode 2.1",
+                    "attributes": {
+                        "dimension": "1",
+                        "value": 100,
+                        "uncertainty": 0,
+                        "unit": "unit",
+                        "operation": "^(1)"
+                    }
+                },
+                {
+                    "name": "Subnode 2.2",
+                    "attributes": {
+                        "dimension": "1",
+                        "value": 100,
+                        "uncertainty": 0,
+                        "unit": "unit",
+                        "operation": "^(1)"
+                    }
+                },
+                {
+                    "name": "Subnode 2.3",
+                    "attributes": {
+                        "dimension": "1",
+                        "value": 100,
+                        "uncertainty": 0,
+                        "unit": "unit",
+                        "operation": "^(1)"
+                    }
+                },
+                {
+                    "name": "Subnode 2.4",
+                    "attributes": {
+                        "dimension": "1",
+                        "value": 100,
+                        "uncertainty": 0,
+                        "unit": "unit",
+                        "operation": "^(1)"
+                    }
+                }
+            ]
+        }
+    ]
+}
