@@ -1,14 +1,26 @@
 import './App.css';
 import React, { useState } from 'react';
-import ReactiveSearch from './components/SearchBar/ReactSearchAutocomplete';
+import ReactiveSearch from './components/SearchBar/ReactiveSearch';
 import InputArea from './components/InputArea';
 import CenteredTree from './components/CenteredTree';
 import CustomNodeTree from './components/CustomNodeTree';
 import debugData from './components/data/with-attributes.json';
-import searchSuggestion from './data/SOINC_FP_suggestion.json'
+import SOINC_FP_questions from './data/SOINC_FP_suggestion.json'
+import Eric_FP_questions from './data/Eric_FP_suggestion.json'
+const searchSuggestion = SOINC_FP_questions.concat(Eric_FP_questions);
+const PrettyPrintJson = (str) => {
+  try {
+    return JSON.stringify(JSON.parse(str), null, 2);
+  } catch (e) {
+    console.log(e);
+    console.log(str);
+    return str;
+  }
+}
+
 
 function App() {
-  const initialTextAreaValue = JSON.stringify(debugData);
+  const initialTextAreaValue = PrettyPrintJson(JSON.stringify(debugData));
   const [textAreaValue, setTextAreaValue] = useState(initialTextAreaValue);
   const [submittedValue, setSubmittedValue] = useState('');
   const [isTextChanged, setIsChanged] = useState(false);
@@ -30,17 +42,6 @@ function App() {
     setSubmittedValue('');
     setIsChanged(false);
   }
-
-  const PrettyPrintJson = (str) => {
-    try {
-      return JSON.stringify(JSON.parse(str), null, 2);
-    } catch (e) {
-      console.log(e);
-      console.log(str);
-      return str;
-    }
-  }
-
   return (
     <div className="App">
       <header className="App-header">

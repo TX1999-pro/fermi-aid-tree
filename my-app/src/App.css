@@ -23,7 +23,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1vmin);
   color: white;
 }
 
@@ -48,7 +48,7 @@
 .box{
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   margin: 1rem auto;
   width: 30%;
@@ -72,6 +72,17 @@
   .content {
     width: 50vw;
   }
+}
+
+.quick-answer{
+  color: #463333;
+}
+
+.search-bar {
+  position: fixed;
+  top: 1em;
+  left: 5vw;
+  right: 5vw;
 }
 
 textarea {
