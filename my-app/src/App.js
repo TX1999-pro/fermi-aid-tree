@@ -46,9 +46,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1><em>Explore the power of quick estimation</em></h1>
-        <ReactiveSearch suggestions={searchSuggestion} />
       </header>
+
+      <div className="Search-container">
+        <ReactiveSearch suggestions={searchSuggestion} />
+      </div>
       <hr />
+
       <div className='container'>
         <div className='box'>
           <h2>Fermy's Estimation</h2>

@@ -36,8 +36,11 @@ function ReactiveSearch({ suggestions }) {
     }
 
     const handleOnSearch = (string, results) => {
+        // triggered when user press enter
+        setTextInSearchBar(string);
+        setSearchState(1); // searching
         // onSearch = typing: first callback parameter is the string searched
-        //  and the second is the results (array).
+        // and the second is the results (array).
         if (textInSearchBar === '') {
             console.log("No question entered");
             setSearchState(0);
@@ -45,13 +48,13 @@ function ReactiveSearch({ suggestions }) {
             setQuickAnswer('');
             return;
         }
-        console.log("searching for: ");
-        console.log(string, results);
         // if the question in the database, display the quick answer
+        if (true) {
+
+        }
         // else, display the question and ask user to input the answer
-
+        alert('You entered: ' + string);
         //fetchData(string)
-
     }
 
     const handleOnHover = (result) => {
@@ -66,7 +69,7 @@ function ReactiveSearch({ suggestions }) {
         setTextInSearchBar(item.name);
         setQuestionDisplay(item.name);
         setQuickAnswer(item.answer);
-        setSearchState(1); // searching
+        setSearchState(2); // search finished, user selected answer
     }
 
     const handleReset = () => {
@@ -75,6 +78,11 @@ function ReactiveSearch({ suggestions }) {
         setQuestionDisplay('');
         setQuickAnswer('');
         console.log('Resetting Answer Display...');
+    }
+
+    const handleQuery = () => {
+        console.log('Querying...');
+        alert('Waiting for backend...');
     }
 
     const handleOnFocus = () => {
@@ -98,27 +106,28 @@ function ReactiveSearch({ suggestions }) {
                     onHover={handleOnHover}
                     onSelect={handleOnSelect}
                     onFocus={handleOnFocus}
+                    onClear={handleReset}
                     autoFocus
                     formatResult={formatResult}
                     showNoResultsText={"No suggestion matched"}
-                    maxLength={100}
+                    maxLength={200}
                     placeholder={"Type your question here"}
                 />
             </div>
-            {searchState !== 0 &&
+            {searchState === 2 &&
                 <div className='quick-answer'>
-                    <p><strong>{questionDisplay}</strong></p>
                     <p>Answer
                         <span>&nbsp; &#8776; &nbsp;</span>
                         <strong>10<sup>{quickAnswer}</sup></strong>
                     </p>
                     <button onClick={handleReset}>
-                        Ask Another Question
+                        Clear Answer
                     </button>
                     <br />
-                    <button onClick={handleReset}>
-                        Show Details
+                    <button onClick={handleQuery}>
+                        Ask AI
                     </button>
+                    <p>This question is sourced from <a href="">this link</a></p>
                 </div>}
         </div>
     );
