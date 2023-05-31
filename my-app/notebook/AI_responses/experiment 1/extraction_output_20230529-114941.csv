@@ -1,0 +1,21 @@
+Question,Prompt_1_result,Prompt_2_result,Prompt_3_result,Prompt_4_result,Prompt_5_result
+"{'id': 2364, 'name': 'How hot does the superhero, the human torch, have to be to evaporate bullets in flight?', 'answer': 3, 'unit': 'degree'}",NULL. The DESCRIPTION does not provide any information or context to extract the answer in the form of ,4,1,0,7
+"{'id': 2147, 'name': 'How many times could you say the alphabet in 24 hours?', 'answer': 4, 'unit': ''}","x = 4, so the answer is 10^4 = 10,000.",x = 3,x = 4,4,4
+"{'id': 2126, 'name': 'How many bricks are in the exterior of our school building?', 'answer': 6, 'unit': ''}",NULL,5.35,"6 bricks are not mentioned in the given DESCRIPTION, so the answer is NULL.",5,3
+"{'id': 2530, 'name': 'On average and to be approximate, how much carbon emissions will be averted if 30,000 to 50,000 violent gang members were to be suddenly eliminated?', 'answer': 6, 'unit': 'ton'}",NULL,5,NULL,NULL,4
+"{'id': 2101, 'name': 'How much volume would 417234 loosely stacked cherries occupy?', 'answer': 6, 'unit': 'cm**3'}",6,6,6,6,5
+"{'id': 2090, 'name': 'The density of water is just about 1000 kg/m3. The density of air is just about 1000 times less. Estimate the height of the atmosphere. As a simplifying assumption, take the atmosphere to be of uniform density up to some height after which the density rapidly falls to zero.', 'answer': 4, 'unit': 'm'}",x = 4.5,3,3,NULL,2
+"{'id': 2209, 'name': 'If all of the people in the United States move to Colorado, what would be the population density, people per square mile, of that state?', 'answer': 5, 'unit': 'person'}",4,3,x = 3,3,3
+"{'id': 2346, 'name': 'What is the weight of air in your living room?', 'answer': 2, 'unit': 'kg'}",NULL,1,x = 2,1,1
+"{'id': 2354, 'name': 'How long would it have taken ENIAC (or another early computer) to mine 1 bitcoin?', 'answer': 8, 'unit': 'min'}",NULL,NULL,3,-2,x = 1
+"{'id': 2373, 'name': 'What is the total area of all currently existing spiderwebs in the world?', 'answer': 18, 'unit': 'm**2'}",NULL,14,NULL,7,x = 18
+"{'id': 2375, 'name': 'What is the weight of a medieval broad sword?', 'answer': 1, 'unit': 'kg'}",NULL,1,0,0,0
+"{'id': 2104, 'name': 'How much oil is there left in the world?', 'answer': 14, 'unit': ''}",12,12,1,1,14
+"{'id': 2115, 'name': 'Suppose a meteor made of nickel and iron falls to the earth from deep space. Estimate how much its temperature would rise on impact ignoring any atmospheric effects.', 'answer': 1, 'unit': 'kelvin'}",x = 5,8,9,x = 11,6
+"{'id': 2550, 'name': 'What is the mass, in kgs, of the moon?', 'answer': 23, 'unit': 'kg'}",1,x = 22,22,x = 22,x = 25
+"{'id': 2381, 'name': 'How many hairs on your head?', 'answer': 5, 'unit': ''}",5,x = 5.,x = 5,6,x = 5
+"{'id': 2449, 'name': 'At the height of summer, what is the total mass of all the leaves grown on trees in New Hampshire?', 'answer': 13, 'unit': ''}",NULL,13,3,7,13
+"{'id': 2295, 'name': 'How dense is the Milky Way galaxy in terms of stars per cubic light year?', 'answer': 7, 'unit': 'ly'}","The answer cannot be extracted from the given DESCRIPTION. Therefore, the answer is NULL.",-7,-9,x = 0,-10
+"{'id': 2407, 'name': 'What is the average distance, m, between pigment particles in a paint film?', 'answer': -4, 'unit': 'm'}",NULL,-7,-8,-8,-4
+"{'id': 2004, 'name': 'What would be the effect to the oceans If all fishing was banned for four days once a year across the planet?', 'answer': 9, 'unit': ''}",NULL,x = 8,x = 0,0,x = 9
+"{'id': 2502, 'name': 'How much new wood is grown around the world by trees everyday?', 'answer': 15, 'unit': 'pounds'}",NULL,9.2,x = 9-10,x = 9.13,x = 10

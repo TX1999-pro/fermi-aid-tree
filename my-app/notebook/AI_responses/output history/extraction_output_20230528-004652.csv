@@ -1,0 +1,3 @@
+Question,Prompt_1_result,Prompt_2_result,Prompt_3_result,Prompt_4_result,Prompt_5_result
+How many hairs are on the average human head?,x = 5 (10^5),x = 7.,10^5,5,3
+"What is the annual consumption of ice cream, in pounds, for the State of Ohio?",NULL,8,x = 8,8,x = 8

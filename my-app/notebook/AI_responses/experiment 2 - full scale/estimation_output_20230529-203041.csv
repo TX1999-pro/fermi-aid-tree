@@ -1,0 +1,120 @@
+Question,Answer,filter_response,filter_dict,E1,E2,E3,Prompt_2_result
+How many nerd ropes would it take to go around the Earth?,8,"E1. True
+E2. Count of numbers
+E3. N.A.","{'E1': 'True', 'E2': 'Count of numbers', 'E3': 'N.A.'}",True,Count of numbers,N.A.,"REASON: First, we need to estimate the circumference of the Earth. The Earth's equatorial circumference is approximately 40,075 kilometers. Next, we need to estimate the length of a single nerd rope. Let's assume a nerd rope is about 10 centimeters long. Now, we can calculate how many nerd ropes it would take to go around the Earth by dividing the Earth's circumference by the length of a single nerd rope. This gives us approximately 400,750,000 nerd ropes (40,075,000 meters / 0.1 meters per nerd rope). 
+
+ANSWER: x = 10^8 nerd ropes"
+How many Americans are polled in political polls every year?,5,"E1. True
+E2. Count of numbers
+E3. N.A.","{'E1': 'True', 'E2': 'Count of numbers', 'E3': 'N.A.'}",True,Count of numbers,N.A.,"REASON: Political polls typically aim to represent the opinions of the entire population, so we can estimate the number of Americans polled by looking at the size of the population. As of 2021, the estimated population of the United States is around 331 million. However, not everyone is eligible to vote or participate in political polls, so we need to make some assumptions about the target population. Let's assume that around 70% of the population is eligible to participate in political polls, which gives us a target population of around 232 million people. 
+
+Next, we need to estimate the frequency of political polls. This can vary depending on the time of year and the political climate, but let's assume that there are around 10 major political polls conducted each year. 
+
+Finally, we need to estimate the sample size of each poll. This can also vary depending on the pollster and the target population, but let's assume that each poll surveys around 1,000 people. 
+
+To estimate the total number of Americans polled in political polls every year, we can multiply the target population by the number of polls and the sample size: 
+
+232 million eligible Americans * 10 polls per year * 1,000 people per poll = 2.32 billion people polled per year 
+
+However, this number is likely an overestimate since some people may be polled multiple times or may not respond to the poll. Let's assume that each person is polled an average of 1.5 times per year and that the response rate is around 50%. 
+
+Using these assumptions, we can estimate the number of Americans polled in political polls every year as: 
+
+232 million eligible Americans * 10 polls per year * 1,000 people per poll * 1.5 polls per person * 0.5 response rate = 1.74 billion people polled per year 
+
+ANSWER: x = 10^9 Americans polled"
+What would the file size be on an hour of 22.4.8 surround sound audio?,10,"E1. True
+E2. Physical quantity with unit (data storage)
+E3. bytes","{'E1': 'True', 'E2': 'Physical quantity with unit (data storage)', 'E3': 'bytes'}",True,Physical quantity with unit (data storage),bytes,"Sorry, I cannot provide an answer without the embedded reason. Please provide more information."
+How many tiles are on a room's floor?,2,"E1. True
+E2. Count of numbers
+E3. N.A.","{'E1': 'True', 'E2': 'Count of numbers', 'E3': 'N.A.'}",True,Count of numbers,N.A.,"REASON: First, measure the length and width of the room to get the total area of the floor. Let's say the room is 10 feet by 12 feet, so the total area is 120 square feet. Next, determine the size of the tiles. Let's assume they are 1 foot by 1 foot. To find the number of tiles needed, divide the total area of the floor by the area of each tile. In this case, 120 square feet divided by 1 square foot per tile equals 120 tiles. However, it's important to account for waste and cuts, so let's add 10% to the total number of tiles needed. This brings the total to 132 tiles. 
+
+ANSWER: x = 10^2 tiles"
+How loud must a sound be at its origin to be heard 100 feet (34.5 metres) away at low volume (0 dB).,2,"E1. True
+E2. Physical quantity with unit (sound intensity)
+E3. dB","{'E1': 'True', 'E2': 'Physical quantity with unit (sound intensity)', 'E3': 'dB'}",True,Physical quantity with unit (sound intensity),dB,"REASON: The decibel (dB) scale is logarithmic, which means that a sound that is 10 times louder than another sound is 10 dB higher on the scale. The threshold of human hearing is around 0 dB, and every increase of 10 dB represents a sound that is 10 times louder. Assuming that the sound level decreases with distance, we can estimate the loudness of the sound at its origin by considering how much it would have to decrease over 100 feet to reach a volume of 0 dB.
+
+To estimate this, we can use the inverse square law, which states that the intensity of sound decreases with the square of the distance from the source. This means that if a sound is x times louder at a distance of 1 foot than it is at a distance of 100 feet, its intensity is x^2 times greater at 1 foot than at 100 feet.
+
+Assuming that the sound level decreases by a factor of x over 100 feet, we can use the inverse square law to estimate the loudness of the sound at its origin. If the sound is heard at a volume of 0 dB at a distance of 100 feet, we can assume that it would need to be x times louder at a distance of 1 foot to be heard at the same volume. Using the inverse square law, we can set up the equation:
+
+x^2 = 100
+
+Solving for x, we get:
+
+x = 10
+
+This means that the sound would need to be 10 times louder at a distance of 1 foot than it is at a distance of 100 feet to be heard at a volume of 0 dB. Therefore, the loudness of the sound at its origin would be:
+
+x = 10^10 dB
+
+Note that this is an extremely loud sound, equivalent to the sound of a rocket launch or a jet engine at close range."
+"What is the surface area, cm2, of a TiO2 pigment particle?",-8,"E1. True
+E2. Physical quantity with unit (area)
+E3. cm**2","{'E1': 'True', 'E2': 'Physical quantity with unit (area)', 'E3': 'cm**2'}",True,Physical quantity with unit (area),cm**2,"I'm sorry, I cannot provide an answer without the embedded reason. Please provide more information."
+I just cooled myself off by rubbing an ice cube on my skin until it melted. How much energy did it take from body?,4,"E1. True
+E2. Physical quantity with unit (energy)
+E3. Joules","{'E1': 'True', 'E2': 'Physical quantity with unit (energy)', 'E3': 'Joules'}",True,Physical quantity with unit (energy),Joules,"I'm sorry, but I cannot provide an answer without the embedded reason. Please provide more information."
+How many stuffed animals would fit on a shelf?,1,"E1. True
+E2. Count of numbers
+E3. N.A.","{'E1': 'True', 'E2': 'Count of numbers', 'E3': 'N.A.'}",True,Count of numbers,N.A.,"REASON: First, we need to determine the size of the shelf. Let's assume the shelf is 3 feet long and 1 foot deep. Next, we need to estimate the size of the stuffed animals. Let's assume the average stuffed animal is 1 foot long, 6 inches wide, and 6 inches tall. To determine how many stuffed animals can fit on the shelf, we need to calculate the volume of the shelf and the volume of each stuffed animal. The volume of the shelf is 3 feet x 1 foot x 0.5 feet (since it's half a foot deep) = 1.5 cubic feet. The volume of each stuffed animal is 1 foot x 0.5 feet x 0.5 feet = 0.25 cubic feet. To determine how many stuffed animals can fit on the shelf, we divide the volume of the shelf by the volume of each stuffed animal: 1.5 cubic feet / 0.25 cubic feet per stuffed animal = 6 stuffed animals. Therefore, 6 stuffed animals would fit on the shelf. 
+
+ANSWER: x = 6 stuffed animals."
+How much does it cost to leave a light on for an entire year?,0,"E1. True
+E2. Physical quantity with unit (energy)
+E3. Not Given","{'E1': 'True', 'E2': 'Physical quantity with unit (energy)', 'E3': 'Not Given'}",True,Physical quantity with unit (energy),Not Given,"REASON: First, estimate the wattage of the lightbulb. Let's assume it's a 60-watt bulb. Next, estimate the cost of electricity per kilowatt-hour (kWh). In the US, the average cost of electricity is around 13 cents per kWh. One kilowatt-hour is equal to 1,000 watt-hours, so a 60-watt bulb uses 0.06 kWh per hour. Multiply that by the number of hours in a year (8,760) to get the total energy used by the bulb in a year (0.06 kWh/hour x 8,760 hours/year = 525.6 kWh/year). Finally, multiply the total energy used by the cost per kWh to get the cost of leaving the light on for a year (525.6 kWh/year x $0.13/kWh = $68.45/year).
+ANSWER: x = $70/year"
+How many people do we meet in our life?,4,"E1. True
+E2. Count of numbers
+E3. N.A.","{'E1': 'True', 'E2': 'Count of numbers', 'E3': 'N.A.'}",True,Count of numbers,N.A.,"Sorry, I cannot provide an answer without a specific reason or estimation process. Can you please provide more information or context for this question?"
+How many square feet of toilet paper are in the school at any point of time?,5,"QUESTION: How many square feet of toilet paper are in the school at any point of time?
+UNIT: ""in""
+E1. True
+E2. Physical quantity with unit (area)
+E3. inches","{'E1': 'True', 'E2': 'Physical quantity with unit (area)', 'E3': 'inches'}",True,Physical quantity with unit (area),inches,"I'm sorry, but I cannot provide an answer without a reason or estimation process. Please provide more information."
+How many minutes does the average student play video games per day?,2,"E1. True
+E2. Count of numbers
+E3. N.A.","{'E1': 'True', 'E2': 'Count of numbers', 'E3': 'N.A.'}",True,Count of numbers,N.A.,"REASON: Let's assume there are approximately 50 million students in the United States. According to a survey by the NPD Group, 91% of children aged 2-17 play video games. Let's assume this percentage holds true for students as well. So, approximately 45.5 million students play video games. Now, let's estimate the average amount of time a student spends playing video games per day. According to a survey by Common Sense Media, children aged 8-12 spend an average of 4.5 hours per week playing video games, which is about 38 minutes per day. Let's assume this holds true for students as well. Therefore, the average student plays video games for approximately 38 minutes per day.
+
+ANSWER: x = 10^1 minutes"
+How many more RBCs does an adult male have than an adult woman?,0,"E1. True
+E2. Physical quantity with unit (volume)
+E3. Liters","{'E1': 'True', 'E2': 'Physical quantity with unit (volume)', 'E3': 'Liters'}",True,Physical quantity with unit (volume),Liters,"REASON: On average, adult males have a higher red blood cell (RBC) count than adult females. According to the American Society of Hematology, the normal range for RBC count in adult males is 4.5 to 5.5 million cells per microliter (mcL), while the normal range for adult females is 4.0 to 5.0 million cells/mcL. Therefore, we can estimate the difference in RBC count between adult males and females by finding the midpoint of each range and subtracting the female value from the male value. The midpoint of the male range is 5.0 million cells/mcL, and the midpoint of the female range is 4.5 million cells/mcL. So, on average, adult males have approximately 0.5 million more RBCs per mcL than adult females.
+
+ANSWER: x = 5 x 10^5 RBCs/mcL"
+"If all of the TiO2 pigment particles in the gallon of paint were place side by side as in a chain, how long, km, is the chain?",-13,"E1. True
+E2. Physical quantity with unit (length)
+E3. Not Given","{'E1': 'True', 'E2': 'Physical quantity with unit (length)', 'E3': 'Not Given'}",True,Physical quantity with unit (length),Not Given,"I'm sorry, I cannot provide an answer without the embedded reason. Please provide more information."
+"If a lemon can be made into a battery, could lemons jump start a car?",6,"E1. True
+E2. N.A.
+E3. N.A.","{'E1': 'True', 'E2': 'N.A.', 'E3': 'N.A.'}",True,N.A.,N.A.,"Sorry, as an AI language model, I cannot provide an answer to this question as it requires scientific knowledge and experimentation to determine if lemons can actually jump start a car. Fermi estimation is not applicable in this scenario."
+What fraction of volume does one water molecule occupy in a cup of water?,-25,"E1. True
+E2. Ratio
+E3. N.A.","{'E1': 'True', 'E2': 'Ratio', 'E3': 'N.A.'}",True,Ratio,N.A.,"REASON: 1. First, estimate the volume of a cup of water. Let's assume a standard cup size of 8 fluid ounces, which is equivalent to 236.6 milliliters. 2. Next, estimate the number of water molecules in a cup of water. One mole of water contains 6.022 x 10^23 molecules, so a cup of water (236.6 mL) contains approximately 3.34 x 10^24 water molecules (6.022 x 10^23 molecules/mol x 0.2366 L). 3. Finally, estimate the volume of a single water molecule. The diameter of a water molecule is approximately 0.3 nanometers, which gives a volume of approximately 0.014 cubic nanometers (4/3 x pi x (0.3 nm/2)^3). Dividing the volume of a cup of water by the volume of a single water molecule gives us the fraction of volume occupied by a single water molecule in a cup of water. So, one water molecule occupies approximately 4.2 x 10^-23 of the volume in a cup of water.
+
+ANSWER: x = 10^-23"
+"What is the average distance, m, between pigment particles in a paint film?",-4,"E1. True
+E2. Physical quantity with unit (distance)
+E3. meters","{'E1': 'True', 'E2': 'Physical quantity with unit (distance)', 'E3': 'meters'}",True,Physical quantity with unit (distance),meters,"I'm sorry, I cannot provide an answer without the embedded reason. Please provide more information."
+How many trout would it take to pull a houseboat?,3,"E1. True
+E2. Count of numbers
+E3. N.A.","{'E1': 'True', 'E2': 'Count of numbers', 'E3': 'N.A.'}",True,Count of numbers,N.A.,"I'm sorry, but there is no embedded reason or answer provided for this question. Can you please provide more information or context so I can assist you better?"
+"What is the density, g/cc, of the Sun?",9,"E1. True
+E2. Physical quantity with unit (density)
+E3. g/cc","{'E1': 'True', 'E2': 'Physical quantity with unit (density)', 'E3': 'g/cc'}",True,Physical quantity with unit (density),g/cc,"REASON: The density of the Sun can be estimated using its mass and volume. The mass of the Sun is approximately 1.989 x 10^30 kg, and its volume is approximately 1.41 x 10^18 km^3. To convert km^3 to cc, we need to multiply by 10^15. So, the volume of the Sun in cc is approximately 1.41 x 10^33 cc. Dividing the mass by the volume gives us a density of approximately 1.41 g/cc.
+
+ANSWER: x = 1.41 g/cc"
+"If all humans suddenly switched to eating insects instead of all other forms of meat, how large would the farmed insect population per year be?",17.0,"E1. True
+E2. Physical quantity with unit (count of insects)
+E3. Not Given","{'E1': 'True', 'E2': 'Physical quantity with unit (count of insects)', 'E3': 'Not Given'}",True,Physical quantity with unit (count of insects),Not Given,"REASON: According to the Food and Agriculture Organization of the United Nations, the global meat production in 2018 was approximately 330 million tons. Assuming that all of this meat is replaced by insects, we need to estimate how much insect meat is required to meet this demand. Insects are generally smaller than traditional livestock, so we can assume that it would take more insects to produce the same amount of meat. Let's assume that it takes 10 times as many insects to produce the same amount of meat as traditional livestock. This means that we would need to produce 3.3 billion tons of insect meat per year (330 million tons * 10). 
+
+Next, we need to estimate how much insect meat can be produced per insect. This will depend on the type of insect and the farming methods used. Let's assume that we are farming crickets, which are a common insect used for human consumption. According to research, crickets can convert feed into body mass at a rate of approximately 2:1. This means that for every 2 pounds of feed, we can produce 1 pound of cricket meat. 
+
+Now we need to estimate how much feed is required to produce 3.3 billion tons of cricket meat per year. According to research, crickets require approximately 2.2 pounds of feed per pound of body weight gain. Let's assume that we can optimize the farming process to reduce this to 1.5 pounds of feed per pound of body weight gain. This means that we would need to produce 4.95 billion tons of feed per year (3.3 billion tons * 1.5). 
+
+Finally, we need to estimate how many crickets can be produced per ton of feed. According to research, crickets can convert feed into body mass at a rate of approximately 15%. This means that for every ton of feed, we can produce 150 kilograms of cricket meat. 
+
+To calculate the total farmed insect population per year, we can divide the total amount of insect meat required by the amount of insect meat produced per ton of feed. This gives us approximately 22 billion tons of farmed insects per year (3.3 billion tons / 0.15 tons of insect meat per ton of feed). 
+
+ANSWER: x = 10^10 farmed insects per year."
