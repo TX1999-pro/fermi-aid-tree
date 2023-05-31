@@ -7,6 +7,7 @@ const containerStyles = {
 }
 
 const isJson = (str) => {
+    if (str === undefined || str === null || str === '') return false;
     try {
         JSON.parse(str);
     } catch (e) {

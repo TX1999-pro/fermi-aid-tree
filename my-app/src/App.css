@@ -116,6 +116,7 @@ Button {
 }
 
 .Search-container {
+  padding: 2em;
   background-color: #aab924;
   min-height: 35vh;
   display: block;

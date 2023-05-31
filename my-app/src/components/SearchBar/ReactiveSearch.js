@@ -1,7 +1,10 @@
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 import { useState } from 'react';
-function ReactiveSearch({ suggestions }) {
-    // note: the id field is mandatory
+import LLMChatDemo from '../LLMChat/LLMChat';
+import useLLM from "usellm";
+function ReactiveSearch({ suggestions, searchState, setSearchState, setResultFromLLM }) {
+    // We can preload the questions.
+    // Note that the id field is mandatory
     // const items = [
     //     {
     //         id: 0,
@@ -23,24 +26,21 @@ function ReactiveSearch({ suggestions }) {
 
     const [textInSearchBar, setTextInSearchBar] = useState('');
     const [questionDisplay, setQuestionDisplay] = useState('');
-    const [quickAnswer, setQuickAnswer] = useState(''); // when user selected from suggestion
-    const [searchState, setSearchState] = useState(0);
-    // 0: initliase or idle
-    // 1: searching (on focus)
-    // 2: search finished (user selected an item) - display quick result
-    // 3: search finished (user didn't select item but pressed enter)
+    const [quickAnswer, setQuickAnswer] = useState([]); // when user selected from suggestion
 
     const items = suggestions;
-    const fetchData = (value) => {
-        fetch();
-    }
+
+    const llm = useLLM({ serviceUrl: "https://usellm.org/api/llm" }); // testing only
 
     const handleOnSearch = (string, results) => {
-        // triggered when user press enter
-        setTextInSearchBar(string);
-        setSearchState(1); // searching
         // onSearch = typing: first callback parameter is the string searched
         // and the second is the results (array).
+
+        // Vulnerability: this function is called whenever user typed something
+        // triggered when user press enter
+        setTextInSearchBar(string); // this is weird, but it works
+        console.log("typing: " + string);
+
         if (textInSearchBar === '') {
             console.log("No question entered");
             setSearchState(0);
@@ -48,18 +48,29 @@ function ReactiveSearch({ suggestions }) {
             setQuickAnswer('');
             return;
         }
-        // if the question in the database, display the quick answer
-        if (true) {
-
+        console.log('You searched: ' + textInSearchBar); // !BUG: whenever user typed something, this alert will pop up
+        fetchAIResponse(textInSearchBar, searchState);
+    }
+    async function fetchAIResponse(query, searchState) {
+        if (searchState === 3) return; // exit if already in State 3
+        setSearchState(3); // user pressed enter, waiting for response
+        try {
+            await llm.chat({
+                messages: [{ role: "user", content: query }],
+                stream: true,
+                onStream: ({ message }) => setResultFromLLM(message.content),
+            });
+        } catch (error) {
+            console.error("Something went wrong!", error);
+            setResultFromLLM("Something went wrong! Please try again later.");
         }
-        // else, display the question and ask user to input the answer
-        alert('You entered: ' + string);
-        //fetchData(string)
+        await setSearchState(2);
     }
 
     const handleOnHover = (result) => {
         // the item hovered
-        // console.log(result);
+        //console.log(result.name);
+        setTextInSearchBar(result.name);
     }
 
     const handleOnSelect = (item) => {
@@ -68,7 +79,8 @@ function ReactiveSearch({ suggestions }) {
         console.log(item);
         setTextInSearchBar(item.name);
         setQuestionDisplay(item.name);
-        setQuickAnswer(item.answer);
+        setQuickAnswer([item.answer, item.unit]);
+        setResultFromLLM(""); // clear LLM result
         setSearchState(2); // search finished, user selected answer
     }
 
@@ -76,7 +88,7 @@ function ReactiveSearch({ suggestions }) {
         setSearchState(0);
         setTextInSearchBar('');
         setQuestionDisplay('');
-        setQuickAnswer('');
+        setQuickAnswer([]);
         console.log('Resetting Answer Display...');
     }
 
@@ -86,13 +98,19 @@ function ReactiveSearch({ suggestions }) {
     }
 
     const handleOnFocus = () => {
-        console.log('Focused');
+        console.log('Focused On Search Bar');
     }
 
     const formatResult = (item) => {
         return (
             <>
-                <span style={{ display: 'block', textAlign: 'left' }}>{item.name}</span>
+                <div style={{ display: 'flex', flexDirection: "column", textAlign: 'left' }}>
+                    <span>{item.name}</span>
+                    <span style={{ textAlign: 'right', color: "darkslategray" }}>&nbsp; &#8776; &nbsp;10<sup>{item.answer}</sup></span>
+                    {/* <span style={{ textAlign: 'right', color: "darkslategray", backgroundColor: '#d9e0c6' }}>id: {item.id}</span> */}
+                </div>
+
+
             </>
         );
     }
@@ -100,7 +118,7 @@ function ReactiveSearch({ suggestions }) {
     return (
         <div >
             <div className="search-bar" >
-                <ReactSearchAutocomplete style={{ width: 600 }}
+                <ReactSearchAutocomplete
                     items={items}
                     onSearch={handleOnSearch}
                     onHover={handleOnHover}
@@ -111,24 +129,26 @@ function ReactiveSearch({ suggestions }) {
                     formatResult={formatResult}
                     showNoResultsText={"No suggestion matched"}
                     maxLength={200}
-                    placeholder={"Type your question here"}
+                    placeholder={"Type your own question and press enter to ask AI, or pick a suggested question..."}
                 />
             </div>
-            {searchState === 2 &&
+            {questionDisplay !== "" &&
                 <div className='quick-answer'>
-                    <p>Answer
+                    <p>Quick Answer
                         <span>&nbsp; &#8776; &nbsp;</span>
-                        <strong>10<sup>{quickAnswer}</sup></strong>
+                        <strong>10<sup>{quickAnswer[0]}</sup></strong>
+                        &nbsp; {quickAnswer[1]}
                     </p>
+                    <p>This question is sourced from <a href="">this link</a></p>
+                    <br />
+                    {/* <LLMChatDemo query={textInSearchBar} onEnterPressed={handleOnSearch} /> */}
+                    <button onClick={handleOnSearch}>Ask Fermy!</button>
                     <button onClick={handleReset}>
                         Clear Answer
                     </button>
-                    <br />
-                    <button onClick={handleQuery}>
-                        Ask AI
-                    </button>
-                    <p>This question is sourced from <a href="">this link</a></p>
+
                 </div>}
+            <br />
         </div>
     );
 }
