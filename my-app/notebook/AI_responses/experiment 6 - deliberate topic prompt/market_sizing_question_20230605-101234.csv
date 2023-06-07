@@ -1,0 +1,24 @@
+question,answer_after_warm_up,answer_json,answer_python
+How many libraries are there in Berlin?,"Sure! Let's apply the Fermi estimation technique to estimate the number of libraries in Berlin. We'll break the problem down into smaller, more manageable questions and make reasonable assumptions to answer them.
+
+1. Estimate the population of Berlin: As of my knowledge cutoff in 2021, the population of Berlin was around 3.7 million people.
+
+2. Estimate the number of people served by a single library: We can make a reasonable assumption that a library serves a certain number of people in its vicinity. Let's assume that one library serves around 20,000 people.
+
+Now, we can perform a simple calculation using our estimates:
+
+Number of libraries = (Population of Berlin) / (Number of people served by a single library)
+
+Number of libraries = 3,700,000 / 20,000 ??? 185
+
+So, based on our Fermi estimation, there are approximately 185 libraries in Berlin. Keep in mind that this is a rough estimate, and the actual number may be different. However, this approach gives us a ballpark figure that can be useful for problem-solving and decision-making.","JSON={""Step 1"": ""Estimate the population of Berlin: As of my knowledge cutoff in 2021, the population of Berlin was around 3.7 million people."", ""Step 2"": ""Estimate the number of people served by a single library: We can make a reasonable assumption that a library serves a certain number of people in its vicinity. Let's assume that one library serves around 20,000 people."", ""Step 3"": ""Number of libraries = (Population of Berlin) / (Number of people served by a single library)"", ""Step 4"": ""Number of libraries = 3,700,000 / 20,000 ??? 185. So, based on our Fermi estimation, there are approximately 185 libraries in Berlin. Keep in mind that this is a rough estimate, and the actual number may be different. However, this approach gives us a ballpark figure that can be useful for problem-solving and decision-making.""}","""""""python
+# Step 1: Define the variables
+population_berlin = 3_700_000  # People
+people_served_by_one_library = 20_000  # People
+
+# Step 2: Calculate the number of libraries in Berlin
+number_of_libraries = population_berlin / people_served_by_one_library
+
+# Step 3: Print the result
+print(f""Based on our Fermi estimation, there are approximately {number_of_libraries:.0f} libraries in Berlin."")
+"""""""
